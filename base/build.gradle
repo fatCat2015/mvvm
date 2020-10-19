@@ -59,11 +59,6 @@ dependencies {
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
 
-    // paging
-    def paging_version = '2.1.2'
-    api "androidx.paging:paging-runtime:$paging_version"
 
-    //workManager
-    api 'androidx.work:work-runtime-ktx:2.4.0'
 
 }

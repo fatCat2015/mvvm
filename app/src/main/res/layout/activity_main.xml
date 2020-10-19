@@ -7,26 +7,36 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".MainActivity">
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:background="#fff"
-            android:id="@+id/rv"
-            android:layout_width="match_parent"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:layout_height="match_parent">
-
-        </androidx.recyclerview.widget.RecyclerView>
-
         <Button
             android:layout_width="match_parent"
+            android:textAllCaps="false"
+            android:text="Room"
             android:onClick="aa"
             android:layout_height="wrap_content">
         </Button>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:textAllCaps="false"
+            android:text="Paging"
+            android:onClick="bb"
+            android:layout_height="wrap_content">
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:textAllCaps="false"
+            android:text="Simple Storage"
+            android:onClick="cc"
+            android:layout_height="wrap_content">
+        </Button>
+
+    </LinearLayout>
 </layout>

@@ -17,13 +17,11 @@ abstract class AppDataBase:RoomDatabase() {
             override fun migrate(database: SupportSQLiteDatabase) {
                 database.execSQL("alter table user add column height REAL not null default 0")
             }
-
         }
         val migration_2_to_3=object :Migration(2,3){
             override fun migrate(database: SupportSQLiteDatabase) {
                 database.execSQL("alter table user add column weight REAL not null default 0")
             }
-
         }
     }
 }
