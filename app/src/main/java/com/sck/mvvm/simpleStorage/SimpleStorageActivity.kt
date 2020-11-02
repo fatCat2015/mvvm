@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import com.sck.mvvm.R
+import com.sck.mvvm.simpleLocalStorage
 import java.io.Serializable
 
 class SimpleStorageActivity : AppCompatActivity() {
@@ -15,14 +16,12 @@ class SimpleStorageActivity : AppCompatActivity() {
 
     fun put(view: View){
         val contact=Contact("sck","15801958366")
-        val set= setOf("a","b","c")
-        simpleLocalStorage.put(mapOf("a" to contact,"b" to set))
+        simpleLocalStorage.put(mapOf("a" to contact))
     }
 
     fun get(view: View){
         val contact=simpleLocalStorage.getObject("a",Contact::class.java)
-        val set=simpleLocalStorage.get<Set<String>>("b", setOf())
-        Log.i("sck220", "get: ${contact}  ${set}")
+        Log.i("sck220", "get: ${contact} ")
     }
 }
 
